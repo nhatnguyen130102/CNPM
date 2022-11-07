@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "newCreateRoom";
+    Layout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
+}
+
+<form style="margin:20px;">
+    <fieldset disabled><h3>Thêm phòng</h3></fieldset>
+    <div class="my-3">
+        <label for="input-id-room" class="form-label">IP phòng</label>
+        <input type="text" class="form-control" id="input-id-room">
+    </div>
+    <div class="mb-3">
+        <label for="input-room-type" class="form-label">Loại phòng</label>
+        <input type="text" class="form-control" id="input-room-type">
+    </div>
+    <div class="mb-3">
+        <label for="input-room-price" class="form-label">Giá</label>
+        <input type="text" class="form-control" id="input-room-price">
+    </div>
+
+    <div class="form-floating">
+        <div class="mb-3">
+            <label for="input-room-status" class="form-label">Trạng thái</label>
+            <select class="form-select " id="floatingSelect" aria-label="Floating label select example">
+                <option selected>Không người ở</option>
+                <option value="1">Có người ở</option>
+                <option value="2">Đã đặt trước</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" style="margin: 10px 0" class="btn btn-primary">Thêm</button>
+    <button type="submit" class="btn btn-danger">
+        @Html.ActionLink("Trở về danh sách", "Phong", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+    </button>
+</form>

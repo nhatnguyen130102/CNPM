@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "_LeftMenu";
+}
+<style>
+    .nav-item{
+        font-size: 18px;
+        padding: 1rem;
+    }
+</style>
+<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+    <div class="container">
+        <div class="navbar-header text-light">
+            <div class="nav-item">
+                @Html.ActionLink("Đặt phòng", "DatPhong", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+            </div>
+            <div class="nav-item">
+                @Html.ActionLink("Phòng", "Phong", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+            </div>
+            <div class="nav-item">
+                @Html.ActionLink("Hóa đơn", "HoaDon", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+            </div>
+            <div class="nav-item">
+                @Html.ActionLink("Dịch vụ", "DichVu", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+            </div>
+            <div class="nav-item">
+                @Html.ActionLink("Người dùng", "NguoiDung", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+            </div>
+            <div class="nav-item">
+                @Html.ActionLink("Email", "Email", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+            </div>
+        </div>
+        </div>
+</nav>
+

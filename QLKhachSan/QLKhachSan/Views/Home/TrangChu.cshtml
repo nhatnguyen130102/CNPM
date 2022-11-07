@@ -1,0 +1,561 @@
+﻿@{
+    ViewBag.Title = "TrangChu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="~/Assets/Admin/css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    <div class="bg-image shadow-sm"
+         style="background-image: url('/Assets/Client/hotel-bg-2.jpg');">
+        <div class="bg-dark bg-opacity-50 text-light p-5">
+            <div class="p-4 text-center">
+                <span style="font-size: 70px; font-weight: 800">ĐẶT PHÒNG NGAY</span>
+                <p class="w-75 m-auto mt-2 mb-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium labore accusamus sequi, voluptate
+                    debitis tenetur in deleniti possimus modi voluptatum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Repellendus praesentium labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum.
+                </p>
+            </div>
+            <div class="container-fluid row">
+                <div class="col d-flex flex-column">
+                    <span class="mb-1 align-self-start fw-bold fs-5">Họ tên</span>
+                    <input id="booking-input-name" type="text" required placeholder="Nhập họ tên"
+                           style="padding:1rem; border-radius: 10px; border: none; opacity: 0.8" />
+                </div>
+                <div class="col d-flex flex-column">
+                    <span class="mb-1 align-self-start fw-bold fs-5">Số điện thoại</span>
+                    <input id="booking-input-phone" type="text" required placeholder="Nhập số điện thoại"
+                           style="padding:1rem; border-radius: 10px; border: none; opacity: 0.8" />
+                </div>
+                <div class="col d-flex flex-column">
+                    <span class="mb-1 align-self-start fw-bold fs-5">Email</span>
+                    <input id="booking-input-email" type="text" required placeholder="Nhập email"
+                           style="padding:1rem; border-radius: 10px; border: none; opacity: 0.8" />
+                </div>
+            </div>
+            <div class="container-fluid row mt-3">
+                <div class="col d-flex flex-column">
+                    <span class="mb-1 align-self-start fw-bold fs-5">Checkin</span>
+                    <input id="checkin" type="date" required
+                           style="padding:1rem; border-radius: 10px; border: none; opacity: 0.8" />
+                </div>
+                <div class="col d-flex flex-column">
+                    <span class="mb-1 align-self-start fw-bold fs-5">Checkout</span>
+                    <input id="checkout" type="date" required
+                           style="padding:1rem; border-radius: 10px; border: none; opacity: 0.8" />
+                </div>
+                <div class="col d-flex flex-column">
+                    <label for="" class="mb-1 align-self-start fw-bold fs-5">Dịch vụ</label>
+                    <select id="floatingSelect_servicetype"
+                            style="padding:1.1rem 1rem; border-radius: 10px; border: none; opacity: 0.8">
+                        <option selected>Ăn uống</option>
+                        <option value="1">Spa</option>
+                        <option value="2">Bar</option>
+                        <option value="3">Gym</option>
+                    </select>
+                </div>
+                <div class="col d-flex flex-column">
+                    <label for="" class="mb-1 align-self-start fw-bold fs-5">Loại phòng</label>
+                    <select id="floatingSelect_roomtype"
+                            style="padding:1.1rem 1rem; border-radius: 10px; border: none; opacity: 0.8">
+                        <option selected>Phòng đơn</option>
+                        <option value="1">Phòng đôi</option>
+                        <option value="2">Phòng ba</option>
+                        <option value="3">Phòng cao cấp</option>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center my-5">
+                <button class="btn shadow-sm py-3 px-4 fs-5"
+                        style="padding:1.1rem 1rem; border-radius: 10px; border: none; opacity: 0.9; background-color: #ffe763">
+                    Đặt phòng
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="w-50 h-100">
+        <div class="bg-light py-4 position-absolute start-50 translate-middle d-flex flex-row shadow-lg"
+             style="top: 48em; border-radius: 20px">
+            <div class="px-4">
+                <i class="fa-solid fa-wifi"></i>
+                <span>Wifi miễn phí</span>
+            </div>
+            <div class="px-4">
+                <i class="fa-solid fa-tv"></i>
+                <span>Tivi HD</span>
+            </div>
+            <div class="px-4">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Cafe sáng</span>
+            </div>
+            <div class="px-4">
+                <i class="fa-solid fa-ban-smoking"></i>
+                <span>Cấm hút thuốc</span>
+            </div>
+        </div>
+        <div class="position-absolute d-flex flex-row justify-content-around"
+                 style="top: 53em">
+                <div class="card w-25 shadow-sm">
+                    <div class="card-img-top">
+                        <img class="img-fluid" src="~/Assets/Client/room-vip-1.jpg" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="blockquote">Tên phòng</h5>
+                        <p class="blockquote-footer mt-2">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5 class="text-end">$00.0</h5>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button class="btn btn-outline-dark">Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="card w-25 shadow-sm">
+                    <div class="card-img-top">
+                        <img class="img-fluid" src="~/Assets/Client/room-vip-2.jpg" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="blockquote">Tên phòng</h5>
+                        <p class="blockquote-footer mt-2">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5 class="text-end">$00.0</h5>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button class="btn btn-outline-dark">Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="card w-25 shadow-sm">
+                    <div class="card-img-top">
+                        <img class="img-fluid" src="~/Assets/Client/room-vip-4.jpg" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="blockquote">Tên phòng</h5>
+                        <p class="blockquote-footer mt-2">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5 class="text-end">$00.0</h5>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button class="btn btn-outline-dark">Xem chi tiết</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div class="my-5">
+            <div class="d-flex flex-row">
+                <img class="w-50" src="~/Assets/Client/restaurant.jpg" />
+                <div class="w-50 p-5">
+                    <div class="m-auto mt-5">
+                        <h3>Ăn uống</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <h5>Giá dao động: $0.0 - $0.0</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="w-50 p-5">
+                    <div class="m-auto mt-5 text-end">
+                        <h3>Spa</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <h5>Giá dao động: $0.0 - $0.0</h5>
+                    </div>
+                </div>
+                <img class="w-50" src="~/Assets/Client/spa.jpg" />
+            </div>
+            <div class="d-flex flex-row">
+                <img class="w-50" src="~/Assets/Client/bar.jpg" />
+                <div class="w-50 p-5">
+                    <div class="m-auto mt-5">
+                        <h3>Bar</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <h5>Giá dao động: $0.0 - $0.0</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="w-50 p-5">
+                    <div class="m-auto mt-5 text-end">
+                        <h3>Gym</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Repellendus praesentium labore accusamus sequi, voluptate
+                            debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <h5>Giá dao động: $0.0 - $0.0</h5>
+                    </div>
+                </div>
+                <img class="w-50" src="~/Assets/Client/gym.jpg" />
+            </div>
+        </div>
+        <div class="home-body-container m-4" style="margin-bottom: 20rem">
+            <div class="row my-4 justify-content-sm-between">
+                <div class="col d-flex flex-row">
+                    <div class="col-lg-4">
+                        <img src="~/Assets/Client/room-sale.jpg" class="img-fluid" />
+                    </div>
+                    <div class="d-flex flex-column mb-auto" style="padding-left: 2rem">
+                        <h3>Tên phòng</h3>
+                        <p class="text-justify">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5>Giá phòng</h5>
+                    </div>
+                </div>
+                <div class="col d-flex flex-row">
+                    <div class="col-lg-4">
+                        <img src="~/Assets/Client/room-sale.jpg" class="img-fluid" />
+                    </div>
+                    <div class="d-flex flex-column mb-auto" style="padding-left: 2rem">
+                        <h3>Tên phòng</h3>
+                        <p class="text-justify">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5>Giá phòng</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4 justify-content-sm-between">
+                <div class="col d-flex flex-row">
+                    <div class="col-lg-4">
+                        <img src="~/Assets/Client/room-sale.jpg" class="img-fluid" />
+                    </div>
+                    <div class="d-flex flex-column mb-auto" style="padding-left: 2rem">
+                        <h3>Tên phòng</h3>
+                        <p class="text-justify">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5>Giá phòng</h5>
+                    </div>
+                </div>
+                <div class="col d-flex flex-row">
+                    <div class="col-lg-4">
+                        <img src="~/Assets/Client/room-sale.jpg" class="img-fluid" />
+                    </div>
+                    <div class="d-flex flex-column mb-auto" style="padding-left: 2rem">
+                        <h3>Tên phòng</h3>
+                        <p class="text-justify">
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour.
+                        </p>
+                        <h5>Giá phòng</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary m-3">Xem thêm</button>
+            </div>
+            <div class="row my-4 justify-content-sm-between">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top img-fluid" src="~/Assets/Client/room.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-text text-justify">
+                            <h5 class="blockquote">Tên phòng</h5>
+                            <p class="blockquote-footer mt-2">
+                                There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected humour.
+                            </p>
+                            <h5 class="text-end">$00.0</h5>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top img-fluid" src="~/Assets/Client/room.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-text text-justify">
+                            <h5 class="blockquote">Tên phòng</h5>
+                            <p class="blockquote-footer mt-2">
+                                There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected humour.
+                            </p>
+                            <h5 class="text-end">$00.0</h5>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top img-fluid" src="~/Assets/Client/room.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-text text-justify">
+                            <h5 class="blockquote">Tên phòng</h5>
+                            <p class="blockquote-footer mt-2">
+                                There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected humour.
+                            </p>
+                            <h5 class="text-end">$00.0</h5>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top img-fluid" src="~/Assets/Client/room.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-text text-justify">
+                            <<h5 class="blockquote">Tên phòng</h5>
+                            <p class="blockquote-footer mt-2">
+                                There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected humour.
+                            </p>
+                            <h5 class="text-end">$00.0</h5>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary m-3">Xem thêm</button>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col bg-image p-5 text-center shadow-sm rounded text-white"
+                     style="background-image: url('/Assets/Client/hotel-wall.jpg');">
+                    <div class="h-100 p-3 rounded-3 bg-dark bg-opacity-25">
+                        <h1 class="mb-3 h2">Phòng đơn</h1>
+                        <p class="text-justify">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+                            labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <button class="btn btn-outline-light mt-3">Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="col bg-image p-5 text-center shadow-sm rounded text-white"
+                     style="background-image: url('/Assets/Client/hotel-bg-2.jpg');">
+                    <div class="h-100 p-3 rounded-3 bg-dark bg-opacity-25">
+                        <h1 class="mb-3 h2">Phòng đôi</h1>
+                        <p class="text-justify">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+                            labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <button class="btn btn-outline-light mt-3">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col bg-image p-5 text-center shadow-sm rounded text-white"
+                     style="background-image: url('/Assets/Client/hotel-wall-4.jpg');">
+                    <div class="h-100 p-3 rounded-3 bg-dark bg-opacity-25">
+                        <h1 class="mb-3 h2">Phòng ba</h1>
+                        <p class="text-justify">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+                            labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <button class="btn btn-outline-light mt-3">Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="col bg-image p-5 text-center shadow-sm rounded text-white"
+                     style="background-image: url('/Assets/Client/hotel-wall-3.jpg');">
+                    <div class="h-100 p-3 rounded-3 bg-dark bg-opacity-25">
+                        <h1 class="mb-3 h2">Phòng cao cấp</h1>
+                        <p class="text-justify">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+                            labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum.
+                        </p>
+                        <button class="btn btn-outline-light mt-3">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <h3 class="fw-bold">Vị trí toạ lạc</h3>
+                <span class="text-sm-start">Các điểm đến lí tưởng xung quanh khách sạn</span>
+            </div>
+            <div class="row my-4 justify-content-sm-between">
+                <div class="col" id="what-nearby">
+                    <div class="row">
+                        <h5>Gần đây</h5>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Công viên Hoàng Văn Thụ
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            550 m
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Công viên Gia Định
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            1.1 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Công viên Bàu cát
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            3.1 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Công viên Nguyễn Sỹ Sách
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            3.5 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Đài tưởng niệm
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            3.5 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Công viên Lê Văn Tám
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            3.8 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Khu Du lịch Kỳ Hoà
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            4 km
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="restaurant-and-cafe-nearby">
+                    <div id="restaurant-nearby">
+                        <div class="row">
+                            <h5>Nhà hàng</h5>
+                        </div>
+                        <div class="row my-2 justify-content-between">
+                            <div class="col-8">
+                                Nhà hàng Papa's Chicken
+                            </div>
+                            <div class="col-4 text-secondary text-end">
+                                200 m
+                            </div>
+                            <div class="mt-3 mb-1 border-bottom"></div>
+                        </div>
+                        <div class="row my-2 justify-content-between">
+                            <div class="col-8">
+                                Nhà hàng Al Fresco
+                            </div>
+                            <div class="col-4 text-secondary text-end">
+                                200 m
+                            </div>
+                            <div class="mt-3 mb-1 border-bottom"></div>
+                        </div>
+                        <div class="row my-2 justify-content-between">
+                            <div class="col-8">
+                                Nhà hàng ISushi Trường Sơn
+                            </div>
+                            <div class="col-4 text-secondary text-end">
+                                300 m
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5" id="cafe-nearby">
+                        <div class="row">
+                            <h5>Cà phê</h5>
+                        </div>
+                        <div class="row my-2 justify-content-between">
+                            <div class="col-8">
+                                Cà phê The Bush
+                            </div>
+                            <div class="col-4 text-secondary text-end">
+                                100 m
+                            </div>
+                            <div class="mt-3 mb-1 border-bottom"></div>
+                        </div>
+                        <div class="row my-2 justify-content-between">
+                            <div class="col-8">
+                                Cà phê Robica Coffee
+                            </div>
+                            <div class="col-4 text-secondary text-end">
+                                200 m
+                            </div>
+                            <div class="mt-3 mb-1 border-bottom"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="airport-nearby">
+                    <div class="row">
+                        <h5>Sân bay</h5>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Sân bay Tân Sơn Nhất
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            1.6 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                    <div class="row my-2 justify-content-between">
+                        <div class="col-8">
+                            Sân bay Vũng Tàu
+                        </div>
+                        <div class="col-4 text-secondary text-end">
+                            67 km
+                        </div>
+                        <div class="mt-3 mb-1 border-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

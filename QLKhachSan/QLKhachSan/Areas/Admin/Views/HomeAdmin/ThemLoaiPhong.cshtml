@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "ThemLoaiPhong";
+    Layout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
+}
+<form style="margin:20px">
+    <fieldset disabled><h3>Thêm loại phòng</h3> </fieldset>
+    <div class="my-3">
+        <label for="input-new-room-type" class="form-label">Loại phòng</label>
+        <input type="text" class="form-control" id="input-new-room-type">
+    </div>
+    <div class="my-3">
+        <label for="input-new-room-price" class="form-label">Giá phòng</label>
+        <input type="text" class="form-control" id="input-new-room-price">
+    </div>
+    <button type="submit" style="margin: 10px 0" class="btn btn-primary">Thêm</button>
+    <button type="submit" class="btn btn-danger">
+        @Html.ActionLink("Trở về danh sách", "LoaiPhong", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+    </button>
+</form>

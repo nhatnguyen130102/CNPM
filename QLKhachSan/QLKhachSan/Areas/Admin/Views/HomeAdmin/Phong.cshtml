@@ -1,0 +1,62 @@
+﻿@model IEnumerable<QLKhachSan.Models.Phong>
+
+@{
+    ViewBag.Title = "Phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Assets/Admin/css/styles.css" rel="stylesheet" />
+
+
+<main>
+    <form style="margin:20px">
+        <fieldset disabled><h3>Phòng</h3></fieldset>
+        <button type="button" onclick="location.href='@Url.Action("ThemPhong", "HomeAdmin")'" class="btn btn-primary w-25 btn-lg mb-4 mt-3">Thêm mới</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.maphong)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.malp)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.tenphong)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.trangthai)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maphong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.malp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tenphong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.trangthai)
+                        </td>
+                        <td>
+
+                            <button type="button" onclick="location.href='@Url.Action("ThemPhong", "HomeAdmin")'" style="padding: 10px ; width: 100px" class="btn btn-danger btn-lg">Sửa </button>
+                            <button type="button" onclick="location.href='@Url.Action("ThemPhong", "HomeAdmin")'" style="padding: 10px ; width: 100px" class="btn btn-dark btn-lg">Chi Tiết </button>
+                            <button type="button" onclick="location.href='@Url.Action("ThemPhong", "HomeAdmin")'" style="padding: 10px ; width: 100px" class="btn btn-warning btn-lg">Xóa </button>
+                            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                        </td>
+                    </tr>
+                }
+        </table>
+    </form>
+</main>

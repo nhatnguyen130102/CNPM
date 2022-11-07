@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "BookingInfo";
+    Layout = "/Areas/Admin/Views/Shared/_layout.cshtml";
+}
+
+<main>
+    <form style="margin:20px">
+        <fieldset disabled><h3>Đặt phòng</h3></fieldset>
+        <button type="button" class="btn btn-primary btn-lg mt-3">Thêm mới</button>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Tên khách hàng</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Ngày đặt</th>
+                    <th scope="col">Ngày trả</th>
+                    <th scope="col">Loại phòng</th>
+                    <th scope="col">Dịch vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="d-flex align-items-center justify-content-end">
+                        <button type="button" style="padding: 10px; width: 100px" class="btn btn-danger btn-lg">Sửa </button>
+                        <button type="button" style="padding: 10px; width: 100px;" class="btn btn-dark btn-lg">Chi tiết </button>
+                        <button type="button" style="padding: 10px; width: 100px;" class="btn btn-warning btn-lg">Xóa </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</main>

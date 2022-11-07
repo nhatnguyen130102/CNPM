@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "newUserInfo";
+    Layout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
+}
+<form style="margin:20px">
+    <fieldset disabled><h3>Thêm người dùng</h3></fieldset>
+    <div class="my-3">
+        <label for="input-name" class="form-label">Họ tên</label>
+        <input type="text" class="form-control" id="input-name">
+    </div>
+    <div class="my-3">
+        <label for="input-password" class="form-label">Mật khẩu</label>
+        <input type="text" class="form-control" id="input-password">
+    </div>
+    <div class="mb-3">
+        <label for="input-address" class="form-label">Địa chỉ</label>
+        <input type="text" class="form-control" id="input-address">
+    </div>
+    <div class="mb-3">
+        <label for="input-email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="input-email">
+    </div>
+    <div class="mb-3">
+        <label for="input-identity" class="form-label">Chức vụ</label>
+        <input type="text" class="form-control" id="input-identity">
+    </div>
+    <button type="submit" style="margin: 10px 0" class="btn btn-primary">Thêm</button>
+    <button type="submit" class="btn btn-danger">
+        @Html.ActionLink("Trở về danh sách", "NguoiDung", "HomeAdmin", new { area = "Admin" }, new { @style = "color: #ffffff; text-decoration: none" })
+    </button>
+</form>

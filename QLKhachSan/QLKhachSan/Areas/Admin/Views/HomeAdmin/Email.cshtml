@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Email";
+    Layout = "~/Areas/Admin/Views/Shared/_layout.cshtml";
+}
+<main>
+    <form style="margin: 20px;">
+        <fieldset disabled><h3>Email</h3></fieldset>
+        <div class="mb-3 mt-3">
+            <label for="input-email" class="form-label">Gửi đến</label>
+            <input type="email" class="form-control" id="input-email" placeholder="abc@gmail.com">
+        </div>
+        <div class="mb-3">
+            <label for="input-title" class="form-label">Tiêu đề</label>
+            <input type="text" class="form-control" id="input-title" placeholder="Nhập tiêu đề">
+        </div>
+        <div class="mb-3">
+            <label for="input-content" class="form-label">Nội dung</label>
+            <textarea type="text" style="height:100px" class="form-control" id="input-content" placeholder="Nhập nội dung"></textarea>
+        </div>
+        <button type="submit" style="margin: 10px 0" class="btn btn-primary">Gửi</button>
+    </form>
+</main>
